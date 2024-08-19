@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Gender Equity Conversation Starter</title>
+</head>
+<body>
+    <h2>Click the button to get a random question:</h2>
+    <button onclick="getRandomQuestion()">Get Question</button>
+    <p id="question"></p>
+
+    <script>
+        const questions = [
+            "What does gender equity mean to you, and why is it important in the workplace?",
+            "Can you share an experience where you felt gender equity was or wasn't present?",
+            "How can we, as individuals, contribute to a more gender-equitable workplace?",
+            "What are some challenges you think women face in the workplace that men might not?",
+            "How does gender equity benefit everyone in the organization?"
+        ];
+
+        function getRandomQuestion() {
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById('question').innerText = questions[randomIndex];
+        }
+    </script>
+</body>
+</html>
